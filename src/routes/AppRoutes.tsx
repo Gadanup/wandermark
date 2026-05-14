@@ -1,6 +1,5 @@
-import { useQuery } from '@tanstack/react-query'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import { supabase } from '@/lib/supabaseClient'
+import { useAuth } from '@/context/AuthContext'
 import { AlbumPage } from '@/pages/AlbumPage'
 import { LoginPage } from '@/pages/LoginPage'
 import { MapPage } from '@/pages/MapPage'
@@ -12,15 +11,10 @@ import { TripsPage } from '@/pages/TripsPage'
 import { ProtectedRoute } from './ProtectedRoute'
 
 function RootRedirect() {
-  const { data, isPending } = useQuery({
-    queryKey: ['auth', 'session'],
-    queryFn: () => supabase.auth.getSession(),
-    staleTime: 60 * 1000,
-  })
+  const { session, isLoading } = useAuth()
 
-  if (isPending) return null
+  if (isLoading) return null
 
-  const session = data?.data.session
   return <Navigate to={session ? '/map' : '/login'} replace />
 }
 

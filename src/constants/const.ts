@@ -62,7 +62,43 @@ export const BUTTON_LABELS = {
   signIn: 'Sign In',
   signUp: 'Sign Up',
   signOut: 'Sign Out',
+  sendMagicLink: 'Send magic link',
   continue: 'Continue',
   skip: 'Skip for now',
   done: 'Done',
+} as const
+
+export const ONBOARDING_LABELS = {
+  title: 'Set up your profile',
+  subtitle: 'A few quick details to personalise your journal.',
+  usernameLabel: 'Username',
+  usernameHelp: 'Letters, numbers and underscores only.',
+  avatarLabel: 'Profile photo',
+  choosePhoto: 'Choose photo',
+  completeButton: 'Start exploring',
+  usernameMin: 'At least 3 characters',
+  usernameMax: 'Max 30 characters',
+  usernameFormat: 'Letters, numbers and underscores only',
+  usernameRequired: 'Username is required',
+} as const
+
+export const AUTH_LABELS = {
+  signInTitle: 'Welcome back',
+  signUpTitle: 'Start your journal',
+  magicLinkTitle: 'Sign in without a password',
+  emailLabel: 'Email',
+  passwordLabel: 'Password',
+  signInSubtitle: 'Sign in to continue your travels.',
+  signUpSubtitle: 'Create an account to start logging your travels.',
+  magicLinkSubtitle: "We'll send a sign-in link straight to your inbox.",
+  magicLinkSentTitle: 'Check your inbox',
+  magicLinkSent: 'A sign-in link is on its way. You can close this tab.',
+  noAccount: 'No account?',
+  hasAccount: 'Already have an account?',
+  usePassword: 'Use password instead',
+  useMagicLink: 'Or sign in with a magic link',
+  passwordMinLength: 'At least 8 characters',
+  emailInvalid: 'Invalid email address',
+  emailRequired: 'Email is required',
+  passwordRequired: 'Password is required',
 } as const

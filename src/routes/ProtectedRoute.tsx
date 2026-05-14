@@ -1,17 +1,10 @@
-import { useQuery } from '@tanstack/react-query'
 import { Navigate, Outlet } from 'react-router-dom'
-import { supabase } from '@/lib/supabaseClient'
+import { useAuth } from '@/context/AuthContext'
 
 export function ProtectedRoute() {
-  const { data, isPending } = useQuery({
-    queryKey: ['auth', 'session'],
-    queryFn: () => supabase.auth.getSession(),
-    staleTime: 60 * 1000,
-  })
+  const { session, isLoading } = useAuth()
 
-  if (isPending) return null
-
-  const session = data?.data.session
+  if (isLoading) return null
   if (!session) return <Navigate to="/login" replace />
 
   return <Outlet />

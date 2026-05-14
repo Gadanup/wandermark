@@ -78,10 +78,10 @@ Branch naming: `phase/2-core-architecture`, `phase/3-authentication`, etc.
   - [x] 2.5.1 Create `src/constants/const.ts` — initial UI strings (app name, nav labels, empty states)
   - [x] 2.5.2 Create `src/constants/enum.ts` — `PhotoCategory`, `RatingDimension`, `MoodTag`
 
-- [ ] **2.6** Commit phase 2
-  - [ ] 2.6.1 `git add .`
-  - [ ] 2.6.2 `git commit -m "phase 2: core architecture"`
-  - [ ] 2.6.3 `git checkout main && git merge phase/2-core-architecture`
+- [x] **2.6** Commit phase 2
+  - [x] 2.6.1 `git add .`
+  - [x] 2.6.2 `git commit -m "phase 2: core architecture"`
+  - [x] 2.6.3 `git checkout main && git merge phase/2-core-architecture`
 
 ---
 
@@ -89,43 +89,43 @@ Branch naming: `phase/2-core-architecture`, `phase/3-authentication`, etc.
 
 > **Git:** `git checkout -b phase/3-authentication`
 
-- [ ] **3.1** Supabase setup
-  - [ ] 3.1.1 Enable email/password auth and magic link in Supabase dashboard
-  - [ ] 3.1.2 Add redirect URLs: `http://localhost:5173` and production domain
-  - [ ] 3.1.3 Apply DB trigger `handle_new_user` from `docs/DATABASE.md` — auto-creates `profiles` row on sign-up
+- [x] **3.1** Supabase setup
+  - [x] 3.1.1 Enable email/password auth and magic link in Supabase dashboard
+  - [x] 3.1.2 Add redirect URLs: `http://localhost:5173` and production domain
+  - [x] 3.1.3 Apply DB trigger `handle_new_user` from `docs/DATABASE.md` — auto-creates `profiles` row on sign-up
 
-- [ ] **3.2** Auth query layer
-  - [ ] 3.2.1 Create `src/api/auth.ts` — sign-in (password + magic link), sign-up, sign-out, get-session
-  - [ ] 3.2.2 Create `src/api/queryKeys.ts` — key factory starting with `auth` and `profile` keys
+- [x] **3.2** Auth query layer
+  - [x] 3.2.1 Create `src/api/auth.ts` — sign-in (password + magic link), sign-up, sign-out, get-session
+  - [x] 3.2.2 Create `src/api/queryKeys.ts` — key factory starting with `auth` and `profile` keys
 
-- [ ] **3.3** Auth hooks
-  - [ ] 3.3.1 Create `src/hooks/useGetCurrentUser.ts`
-  - [ ] 3.3.2 Create `src/hooks/useSignIn.ts` (useMutation — handles both password and magic link)
-  - [ ] 3.3.3 Create `src/hooks/useSignOut.ts` (useMutation)
-  - [ ] 3.3.4 Create `src/hooks/useSignUp.ts` (useMutation)
+- [x] **3.3** Auth hooks
+  - [x] 3.3.1 Create `src/hooks/useGetCurrentUser.ts`
+  - [x] 3.3.2 Create `src/hooks/useSignIn.ts` (useMutation — handles both password and magic link)
+  - [x] 3.3.3 Create `src/hooks/useSignOut.ts` (useMutation)
+  - [x] 3.3.4 Create `src/hooks/useSignUp.ts` (useMutation)
 
-- [ ] **3.4** Auth context
-  - [ ] 3.4.1 Create `src/context/AuthContext.tsx` — subscribe to `supabase.auth.onAuthStateChange`, expose `user` and `session`
-  - [ ] 3.4.2 Add `AuthProvider` to `AppProviders.tsx`
+- [x] **3.4** Auth context
+  - [x] 3.4.1 Create `src/context/AuthContext.tsx` — subscribe to `supabase.auth.onAuthStateChange`, expose `user` and `session`
+  - [x] 3.4.2 Add `AuthProvider` to `AppProviders.tsx`
 
-- [ ] **3.5** Login page
-  - [ ] 3.5.1 Create `src/pages/LoginPage.tsx` — email/password form + magic link option
-  - [ ] 3.5.2 Use RHF + Yup with `Controller` for MUI inputs
-  - [ ] 3.5.3 Redirect to `/map` on successful sign-in, to `/onboarding` on first sign-up
+- [x] **3.5** Login page
+  - [x] 3.5.1 Create `src/pages/LoginPage.tsx` — email/password form + magic link option
+  - [x] 3.5.2 Use RHF + Yup with `Controller` for MUI inputs
+  - [x] 3.5.3 Redirect to `/map` on successful sign-in, to `/onboarding` on first sign-up
 
-- [ ] **3.6** Onboarding page
-  - [ ] 3.6.1 Create `src/pages/OnboardingPage.tsx` — username input + avatar upload
-  - [ ] 3.6.2 Check if `profiles.username` still has the auto-generated value — skip onboarding if user has already set it
-  - [ ] 3.6.3 On complete, redirect to `/map`
+- [x] **3.6** Onboarding page
+  - [x] 3.6.1 Create `src/pages/OnboardingPage.tsx` — username input + avatar upload
+  - [x] 3.6.2 Check if `profiles.username` still has the auto-generated value — skip onboarding if user has already set it
+  - [x] 3.6.3 On complete, redirect to `/map`
 
-- [ ] **3.7** Tests
-  - [ ] 3.7.1 Write tests for `useGetCurrentUser` in `src/hooks/test/`
-  - [ ] 3.7.2 Write tests for `useSignIn` and `useSignOut`
+- [x] **3.7** Tests
+  - [x] 3.7.1 Write tests for `useGetCurrentUser` in `src/hooks/test/`
+  - [x] 3.7.2 Write tests for `useSignIn` and `useSignOut`
 
-- [ ] **3.8** Commit phase 3
-  - [ ] 3.8.1 `git add .`
-  - [ ] 3.8.2 `git commit -m "phase 3: authentication"`
-  - [ ] 3.8.3 `git checkout main && git merge phase/3-authentication`
+- [x] **3.8** Commit phase 3
+  - [x] 3.8.1 `git add .`
+  - [x] 3.8.2 `git commit -m "phase 3: authentication"`
+  - [x] 3.8.3 `git checkout main && git merge phase/3-authentication`
 
 ---
 
