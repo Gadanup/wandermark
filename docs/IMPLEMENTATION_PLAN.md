@@ -41,9 +41,9 @@ Branch naming: `phase/2-core-architecture`, `phase/3-authentication`, etc.
   - [x] 1.3.4 Restrict the MapTiler key to `localhost` in the MapTiler dashboard
   - [x] 1.3.5 Confirm `.env` is in `.gitignore`
 
-- [ ] **1.4** Initial commit (on `main`)
-  - [ ] 1.4.1 `git add .`
-  - [ ] 1.4.2 `git commit -m "phase 1: project setup"`
+- [x] **1.4** Initial commit (on `main`)
+  - [x] 1.4.1 `git add .`
+  - [x] 1.4.2 `git commit -m "phase 1: project setup"`
 
 ---
 
@@ -51,32 +51,32 @@ Branch naming: `phase/2-core-architecture`, `phase/3-authentication`, etc.
 
 > **Git:** `git checkout -b phase/2-core-architecture`
 
-- [ ] **2.1** Supabase client
-  - [ ] 2.1.1 Create `src/lib/supabaseClient.ts` with typed client using `database.types.ts`
-  - [ ] 2.1.2 Run `npx supabase gen types typescript --project-id <id> > src/types/database.types.ts`
+- [x] **2.1** Supabase client
+  - [x] 2.1.1 Create `src/lib/supabaseClient.ts` with typed client using `database.types.ts`
+  - [x] 2.1.2 Run `npx supabase gen types typescript --project-id <id> > src/types/database.types.ts` _(placeholder handwritten — regenerate after Phase 4 schema is applied)_
 
-- [ ] **2.2** App shell
-  - [ ] 2.2.1 Create `src/app/AppProviders.tsx` — `QueryClientProvider` + `ThemeProvider` + `BrowserRouter`
-  - [ ] 2.2.2 Create `src/app/App.tsx` — renders `<AppProviders><AppRoutes /></AppProviders>`
-  - [ ] 2.2.3 Update `src/main.tsx` to render `<App />`
+- [x] **2.2** App shell
+  - [x] 2.2.1 Create `src/app/AppProviders.tsx` — `QueryClientProvider` + `ThemeProvider` + `BrowserRouter`
+  - [x] 2.2.2 Create `src/app/App.tsx` — renders `<AppProviders><AppRoutes /></AppProviders>`
+  - [x] 2.2.3 Update `src/main.tsx` to render `<App />` _(already done in 1.1)_
 
-- [ ] **2.3** Theme
-  - [ ] 2.3.1 Import fonts in `src/main.tsx`: `@fontsource/playfair-display/400.css`, `/700.css` and `@fontsource/dm-sans/400.css`, `/500.css`
-  - [ ] 2.3.2 Create `src/theme.ts` — Explorer palette (light + dark), Playfair Display headings, DM Sans body, MUI v6 component overrides
+- [x] **2.3** Theme
+  - [x] 2.3.1 Import fonts in `src/main.tsx`: `@fontsource/playfair-display/400.css`, `/700.css` and `@fontsource/dm-sans/400.css`, `/500.css`
+  - [x] 2.3.2 Create `src/theme.ts` — Explorer palette (light + dark), Playfair Display headings, DM Sans body, MUI v6 component overrides
     - Light: background `#FAF7F2`, surface `#FFFFFF`, text `#1A1208`, accent `#C4692A`
     - Dark: background `#120F0A`, surface `#1E1810`, text `#F5ECD7`, accent `#D4834A`
-  - [ ] 2.3.3 Use MUI v6 `colorSchemes` + CSS variables for light/dark toggle (no page flicker)
-  - [ ] 2.3.4 All font families and sizes defined in theme only — never at module level
+  - [x] 2.3.3 Use MUI v6 `colorSchemes` + CSS variables for light/dark toggle (no page flicker)
+  - [x] 2.3.4 All font families and sizes defined in theme only — never at module level
 
-- [ ] **2.4** Routing
-  - [ ] 2.4.1 Create `src/routes/AppRoutes.tsx` with all routes: `/login`, `/onboarding`, `/map`, `/places/:id`, `/album`, `/trips`, `/trips/:id`, `/profile`
-  - [ ] 2.4.2 Create `ProtectedRoute` wrapper — redirects to `/login` if no session
-  - [ ] 2.4.3 Root `/` redirects to `/map` (auth) or `/login` (no auth)
-  - [ ] 2.4.4 Create placeholder page components for each route
+- [x] **2.4** Routing
+  - [x] 2.4.1 Create `src/routes/AppRoutes.tsx` with all routes: `/login`, `/onboarding`, `/map`, `/places/:id`, `/album`, `/trips`, `/trips/:id`, `/profile`
+  - [x] 2.4.2 Create `ProtectedRoute` wrapper — redirects to `/login` if no session
+  - [x] 2.4.3 Root `/` redirects to `/map` (auth) or `/login` (no auth)
+  - [x] 2.4.4 Create placeholder page components for each route
 
-- [ ] **2.5** Constants
-  - [ ] 2.5.1 Create `src/constants/const.ts` — initial UI strings (app name, nav labels, empty states)
-  - [ ] 2.5.2 Create `src/constants/enum.ts` — `PhotoCategory`, `RatingDimension`, `MoodTag`
+- [x] **2.5** Constants
+  - [x] 2.5.1 Create `src/constants/const.ts` — initial UI strings (app name, nav labels, empty states)
+  - [x] 2.5.2 Create `src/constants/enum.ts` — `PhotoCategory`, `RatingDimension`, `MoodTag`
 
 - [ ] **2.6** Commit phase 2
   - [ ] 2.6.1 `git add .`

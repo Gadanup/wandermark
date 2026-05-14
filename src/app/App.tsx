@@ -1,3 +1,14 @@
+import { getInitColorSchemeScript } from '@mui/material/styles'
+import { AppProviders } from './AppProviders'
+import { AppRoutes } from '@/routes/AppRoutes'
+
 export function App() {
-  return <div>Wandermark</div>
+  return (
+    <>
+      {getInitColorSchemeScript({ defaultMode: 'system' })}
+      <AppProviders>
+        <AppRoutes />
+      </AppProviders>
+    </>
+  )
 }
